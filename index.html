@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg">
+    <div class="hero">
+        <video autoplay loop muted plays-inline class="vedio"> <source src="./pexels-pixabay-856024-3840x2160-60fps.mp4" type="video/mp4"></video>
+    </div>
+    
+    
+    
+    
+    
+      <main>
+    
+    
+    
+       <header>
+    <div  class="timehere">
+    <p id="time">00:00</p>
+    </div>
+    </header> 
+    <form onsubmit="getWeather(event);">
+    <input type="text" class="cityname"id="cityName" placeholder="enter the city name">
+    <div class="threediv">
+    
+    <div id="result1" class="one">
+    
+    </div>
+    
+    <div class="tw">
+        <div class="div" id="result2"></div>
+        <div class="div" id="result3"></div>
+    </div>
+    
+    </div>
+        
+    
+    
+    
+    
+    <section>
+        <div  id="result4" class="firstsec"></div>
+        <div id="result5" class="secondsec"></div>
+        <div id="result6" class="thirdsec"></div>
+        </section>
+    
+    
+    <footer>
+    
+        <div class="foot">
+    <div  class="o1">  <a href="https://www.linkedin.com/in/muzammil-ali-28a943265/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B%2FAf1KAOfShq3sQdvCsVLrQ%3D%3D"><img width="50em" height="50em" src="./25231.png" alt=""></a></div>
+    <div  class="o1"> <a href="https://github.com/account"> <img width="50em" height="50em" src="./linkedin_black_logo_icon_147114.png" alt=""></a></div>
+    <div  class="o1"><a href="https://www.facebook.com/profile.php?id=100068184127760&mibextid=ZbWKwL"><img width="50em" height="50em" src="./59439.png" alt=""> </a></div>
+        </div>
+    </footer>
+    
+    
+    </main>  
+    </form>
+        
+
+
+            
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script type="module">
+
+   
+
+window.getWeather = function (event) {
+
+    {
+        event.preventDefault()
+    }
+//   let time=  document.querySelector("#time")
+    setInterval(() =>{document.getElementById("time").innerHTML= new Date ().toLocaleString("en-US", {timeZone:`Asia/${cityName}`,timeStyle:'short'});
+
+    })
+
+        
+//     let d = new Date ();
+// time.innerHTML=d.toLocaleTimeString();
+        
+
+        let cityName = document.querySelector("#cityName").value;
+       let APIkey = 'd6ed927cc9153b124434e08fa4e12599'
+       axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIkey}&units=metric`)      
+            .then(function (response)
+             { console.log(response.data) 
+                document.querySelector("#result1").innerHTML = `Tempreture <br/>${response.data.main.temp}°C`  
+                document.querySelector("#result2").innerHTML = `Min<br/>${response.data.main.temp_min}°C` 
+                document.querySelector("#result3").innerHTML = `Max <br/>${response.data.main.temp_max}°C` 
+                document.querySelector("#result4").innerHTML = `wind speed <br/>${response.data.wind.speed}km/h` 
+                document.querySelector("#result5").innerHTML = `deg; <br/> ${response.data.wind.deg}°` 
+                document.querySelector("#result6").innerHTML = `country<br/>${response.data.sys.country}` 
+             })
+
+
+                .catch(function (error) {
+                   
+                    console.log(error.data);
+                    document.querySelector("#result1").innerHTML = "error in getting weather data"
+                })
+           
+
+
+
+    }
+
+</script>  
+</html>

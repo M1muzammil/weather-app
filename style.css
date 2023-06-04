@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+main{
+    margin-top: 1% ;
+max-width: 400px;
+min-width: 300px;
+background: url(./david-moum-nbqlWhOVu6k-unsplash.jpg);
+height: 100%;
+
+border-radius: 10%;
+
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .timehere{
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 4em;
+    height: 4em;
+    font-size: 2em;
+    background: linear-gradient(to right, rgb(255, 47, 47) 80%, rgb(20, 20, 59));
+
+
+}
+.timehere > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.threediv{
+    width: 100%;
+    height: 7em;
+    margin: 1em;
+    display: flex;
+    
+
+}
+.one{
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px rgb(20, 20, 43);
+    width: 60%;
+height: 100%;
+background: linear-gradient(to top , rgb(255, 47,47) 10%, rgb(57, 57, 106)70%,rgb(109, 109, 156));
+}
+
+.tw{
+    
+    height:100%; 
+    margin-left: 0.5em;
+width: 30%;}
+ .div {
+    border-radius: 10px;
+    height: 40%;
+    width:70% ;
+    margin: 1em;
+    margin-top: 0.2em;
+    background: linear-gradient(to top , rgb(255, 47,47) 10%, rgb(57, 57, 106)70%,rgb(109, 109, 156));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+main:hover{
+    background:url(./astronomy-1867616_640.jpg);
+    color: white;
+}
+section{
+width: 90%;
+height: 4em;
+background: linear-gradient(to top , rgb(255, 47,47) 10%, rgb(57, 57, 106)70%,rgb(109, 109, 156));
+margin: 1em;
+display: flex;
+border-radius: 10px;
+gap: 1em;
+
+}
+p{
+   
+}
+
+.firstsec, .secondsec, .thirdsec{
+    width: 30%;
+    
+    /* background-color: red; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.vedio{
+position: absolute;
+right: 0;
+bottom:0 ;
+z-index: -1;
+
+}
+.foot{
+    width: 90%;
+height: 4em;
+
+margin: 1em;
+border-radius: 10px;
+display: flex;
+column-gap: 1em;
+}
+
+.o1{
+    border-radius: 10px;
+    height: 100%;
+    width:70% ;
+    /* margin: 1em; */
+    margin-top: 0.2em;
+    background: linear-gradient(to top , rgb(255, 47,47) 10%, rgb(57, 57, 106)70%,rgb(109, 109, 156));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cityname{
+    width: 90%;
+    height: 4em;
+    background: linear-gradient(to top , rgb(255, 47,47) 10%, rgb(57, 57, 106)70%,rgb(109, 109, 156));
+    margin: 1em;
+    border-radius: 10px;
+    display: flex;
+    column-gap: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+font-weight: bold;
+color: rgb(9, 8, 8);
+}
